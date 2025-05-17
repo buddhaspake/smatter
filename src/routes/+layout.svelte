@@ -4,20 +4,22 @@
     let showTitle: boolean = false;
 </script>
 
-<nav>
-    <AppHeader showTitle={showTitle} />
-    <div class="spacer"></div>
-    <a href="/">Home</a>
-    <a href="/research">Research</a>
-    <a href="/publications">Publications</a>
-    <a href="/team">Team</a>
-    <a href="/join">Join!</a>
-    <a href="/teaching">Teaching</a>
-    <a href="/gallery">Gallery</a>
-</nav>
-<main>
-    {@render children()}
-</main>
+<div class="wrapper">
+    <nav>
+        <AppHeader showTitle={showTitle} />
+        <div class="spacer"></div>
+        <a href="/">Home</a>
+        <a href="/research">Research</a>
+        <a href="/publications">Publications</a>
+        <a href="/team">Team</a>
+        <a href="/join">Join!</a>
+        <a href="/teaching">Teaching</a>
+        <a href="/gallery">Gallery</a>
+    </nav>
+    <main>
+        {@render children()}
+    </main>
+</div>
 
 <style>
     :global(body) {
