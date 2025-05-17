@@ -1,5 +1,6 @@
 <script lang="ts">
 	import AppHeader from "$lib/AppHeader.svelte";
+	import AppFooter from "$lib/AppFooter.svelte";
     let { children } = $props();
     let showTitle: boolean = false;
 </script>
@@ -19,6 +20,7 @@
     <main>
         {@render children()}
     </main>
+    <AppFooter />
 </div>
 
 <style>
@@ -26,6 +28,12 @@
         /* Site-specific */
         font-family: 'Segoe UI', Tahoma, sans-serif; 
         color: #2c2c2c;
+        height: 100vh;
+    }
+    .wrapper {
+        min-height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
     }
     nav {
         padding: 1rem;
