@@ -8,24 +8,39 @@
     <AppHeader showTitle={showTitle} />
     <div class="spacer"></div>
     <a href="/">Home</a>
-    <a href="/about">About</a>
+    <a href="/research">Research</a>
+    <a href="/publications">Publications</a>
+    <a href="/team">Team</a>
+    <a href="/join">Join!</a>
+    <a href="/teaching">Teaching</a>
+    <a href="/gallery">Gallery</a>
 </nav>
+<main>
+    {@render children()}
+</main>
 
 <style>
     :global(body) {
         /* Site-specific */
         font-family: 'Segoe UI', Tahoma, sans-serif; 
+        color: #2c2c2c;
     }
     nav {
-        padding: 0.6rem;
+        padding: 1rem;
         display: flex;
     }
     nav a {
         margin-left: 0.8rem;
         text-transform: uppercase;
+        color: currentColor;
         text-decoration: none;
     }
+    nav a:hover {
+        color: #3a80e3;
+    }
     .spacer { flex-grow: 1 }
+    
+    main {
+        padding: 2rem 1rem; 
+    }
 </style>
-
-{@render children()}
